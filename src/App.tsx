@@ -28,7 +28,8 @@ const App = () => {
 
   useEffect(() => {
     if (shownCount === 2) {
-      let openedItems = gridItems.filter((i) => i.shown);
+      let tempGrid = [...gridItems];
+      let openedItems = tempGrid.filter((i) => i.shown);
       if (openedItems.length === 2) {
         if (openedItems[0].type === openedItems[1].type) {
           openedItems[0].permanentShown = true;
@@ -42,6 +43,7 @@ const App = () => {
         setShownCount(0);
       }
       setMoveCount(moveCount + 1);
+      setGridItems(tempGrid);
     }
   }, [shownCount, gridItems, moveCount]);
 
