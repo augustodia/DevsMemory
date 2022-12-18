@@ -21,4 +21,5 @@ export const Icon = styled.img<IconProps>`
   width: 40px;
   height: 40px;
   opacity: ${props => props.opacity ?? 1};
+  padding: 25px;
 `;

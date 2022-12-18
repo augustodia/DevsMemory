@@ -8,7 +8,6 @@ export const Container = styled.div`
   margin: 0 auto;
   display: flex;
   padding: 50px 0;
-
   @media (max-width: ${BREAKPOINT}) {
     flex-direction: column;
   }
@@ -56,5 +55,9 @@ export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
+
+  @media (max-width: ${BREAKPOINT}) {
+    grid-template-columns: repeat(3 ,1fr);
+  }
 `;
 
